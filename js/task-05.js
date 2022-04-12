@@ -4,5 +4,13 @@ const nameOutput = document.getElementById("name-output");
 inputEl.addEventListener("input", onInputFocus);
 
 function onInputFocus(event) {
-  nameOutput.textContent = event.currentTarget.value;
+  const isEmpty = event.currentTarget.value === "";
+
+  if (isEmpty) {
+    nameOutput.textContent = "Anonymous";
+  }
+
+  if (!isEmpty) {
+    nameOutput.textContent = event.currentTarget.value;
+  }
 }

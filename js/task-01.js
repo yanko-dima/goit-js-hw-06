@@ -4,7 +4,10 @@ const listOfCategory = document.querySelectorAll(".item > ul");
 
 console.log("Number of categories: ", itemElements.length);
 
-itemTitles.forEach((x, y) => {
-  console.log("Category: ", x.textContent);
-  console.log("Elements: ", listOfCategory[y].querySelectorAll("li").length);
+itemTitles.forEach((title, index) => {
+  console.log("Category: ", title.textContent);
+  console.log(
+    "Elements: ",
+    listOfCategory[index].querySelectorAll("li").length
+  );
 });
